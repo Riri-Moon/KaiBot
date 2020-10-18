@@ -1,0 +1,113 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "$designer": {
+      "name": "KaiBot",
+      "description": "",
+      "id": "hfFhEe"
+    }
+  },
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnConversationUpdateActivity",
+      "$designer": {
+        "id": "wGXp0M"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "klsNF8"
+          },
+          "activity": "${SendActivity_klsNF8()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnUnknownIntent",
+      "$designer": {
+        "id": "4llVYi"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "uK5r5c"
+          },
+          "activity": "${SendActivity_uK5r5c()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "QrxvUB",
+        "name": "Room"
+      },
+      "intent": "Room",
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "SPOmv3"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_SPOmv3()}",
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_SPOmv3()}",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "dialog.result"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "lNlZR9"
+          },
+          "elseActions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "VGcCyf"
+              },
+              "condition": "contains(dialog.result,\"PMH\")"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "tevGpA"
+              },
+              "activity": "${SendActivity_tevGpA()}"
+            }
+          ],
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "M5S9AJ"
+              },
+              "activity": "${SendActivity_M5S9AJ()}"
+            }
+          ],
+          "condition": "(contains(dialog.result,\"UCPC\") || contains(dialog.result,\"SMS\"))"
+        }
+      ]
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/microsoft/BotFramework-Composer/stable/Composer/packages/server/schemas/sdk.schema",
+  "generator": "kaibot.lg",
+  "id": "KaiBot",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "Room",
+        "pattern": "Room"
+      }
+    ]
+  },
+  "autoEndDialog": true
+}

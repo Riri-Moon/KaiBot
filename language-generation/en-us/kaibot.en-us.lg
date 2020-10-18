@@ -1,0 +1,20 @@
+[import](common.lg)
+
+
+# SendActivity_uK5r5c()
+- Sorry, I do not understand.
+# SendActivity_klsNF8()
+- ${WelcomeUser()}
+
+# SendActivity_oCkLu7()
+- So you are looking to find ${dialog.result} ?
+# SendActivity_fDGbvm()
+-
+# TextInput_Prompt_SPOmv3()
+- What room are you looking for ?
+# SendActivity_M5S9AJ()
+- This room is located in the main building
+# TextInput_UnrecognizedPrompt_SPOmv3()
+-  Couldn't recognize
+# SendActivity_tevGpA()
+- This room is located on UCM Building from Hajdoczyho street

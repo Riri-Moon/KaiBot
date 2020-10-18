@@ -1,0 +1,1779 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "L7eH4V",
+    "name": "getIntent",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "NLlqIF"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "pzeg95"
+          },
+          "activity": "${SendActivity_pzeg95()}"
+        }
+      ]
+    }
+  ],
+  "generator": "getIntent.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "s"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "a"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "."
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "@"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "1"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "!"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "#"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "$"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "$"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "@"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "T"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "R"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "Y"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "U"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "&"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "9"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "r"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "8"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "e"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "t"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "y"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "s"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "d"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "b"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "j"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "h"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "v"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "v"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "v"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "e"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "f"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "h"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "i"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "w"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "3"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "4"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "9"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "4"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "3"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "0"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "1"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "5"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "8"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "0"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "-"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "-"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "-"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "s"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "-"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "a"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        "pattern": "d"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "${ChoiceInput_UnrecognizedPrompt_78ycNr()}",
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_78ycNr()}",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "value",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "validations": [
+            "intentResponse!=null"
+          ]
+        },
+        "pattern": "m"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "${ChoiceInput_UnrecognizedPrompt_78ycNr()}",
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_78ycNr()}",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "value",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "validations": [
+            "intentResponse!=null"
+          ]
+        },
+        "pattern": "1"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "${ChoiceInput_UnrecognizedPrompt_78ycNr()}",
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_78ycNr()}",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "value",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "validations": [
+            "intentResponse!=null"
+          ]
+        },
+        "pattern": "!"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "${ChoiceInput_UnrecognizedPrompt_78ycNr()}",
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_78ycNr()}",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "value",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "validations": [
+            "intentResponse!=null"
+          ]
+        },
+        "pattern": "#"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "${ChoiceInput_UnrecognizedPrompt_78ycNr()}",
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_78ycNr()}",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "value",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "validations": [
+            "intentResponse!=null"
+          ]
+        },
+        "pattern": "$"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "${ChoiceInput_UnrecognizedPrompt_78ycNr()}",
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_78ycNr()}",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "value",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "validations": [
+            "intentResponse!=null"
+          ]
+        },
+        "pattern": "!"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "${ChoiceInput_UnrecognizedPrompt_78ycNr()}",
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_78ycNr()}",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "value",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "validations": [
+            "intentResponse!=null"
+          ]
+        },
+        "pattern": "@"
+      },
+      {
+        "intent": {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "78ycNr"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_78ycNr()}",
+          "unrecognizedPrompt": "${ChoiceInput_UnrecognizedPrompt_78ycNr()}",
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_78ycNr()}",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "intentResponse",
+          "outputFormat": "value",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "validations": [
+            "intentResponse!=null"
+          ]
+        },
+        "pattern": "%"
+      }
+    ]
+  },
+  "id": "getIntent"
+}
