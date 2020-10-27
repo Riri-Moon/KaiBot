@@ -73,14 +73,25 @@
               "$designer": {
                 "id": "VGcCyf"
               },
-              "condition": "contains(dialog.result,\"PMH\")"
-            },
-            {
-              "$kind": "Microsoft.SendActivity",
-              "$designer": {
-                "id": "tevGpA"
-              },
-              "activity": "${SendActivity_tevGpA()}"
+              "condition": "contains(dialog.result,\"PMH\")",
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "cR3x8W"
+                  },
+                  "activity": "${SendActivity_cR3x8W()}"
+                }
+              ],
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "PZ6M1e"
+                  },
+                  "activity": "${SendActivity_PZ6M1e()}"
+                }
+              ]
             }
           ],
           "actions": [
@@ -95,6 +106,72 @@
           "condition": "(contains(dialog.result,\"UCPC\") || contains(dialog.result,\"SMS\"))"
         }
       ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "NZgpQR",
+        "name": "Teacher"
+      },
+      "intent": "Teacher",
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "8ch1IJ"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "user.style",
+          "outputFormat": "index",
+          "style": "heroCard",
+          "choices": [
+            "Hostovecky",
+            "Jurinova",
+            "Olvecky"
+          ],
+          "prompt": "${ChoiceInput_Prompt_8ch1IJ()}"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "ZORfJy"
+          },
+          "condition": "user.style",
+          "cases": [
+            {
+              "value": 0,
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "E5P9P1"
+                  },
+                  "activity": "${SendActivity_E5P9P1()}"
+                }
+              ]
+            },
+            {
+              "value": 1
+            },
+            {
+              "value": 2
+            }
+          ]
+        }
+      ]
     }
   ],
   "$schema": "https://raw.githubusercontent.com/microsoft/BotFramework-Composer/stable/Composer/packages/server/schemas/sdk.schema",
@@ -106,8 +183,12 @@
       {
         "intent": "Room",
         "pattern": "Room"
+      },
+      {
+        "intent": "Teacher",
+        "pattern": "Teacher"
       }
     ]
   },
-  "autoEndDialog": true
+  "autoEndDialog": false
 }

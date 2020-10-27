@@ -10,11 +10,26 @@
 - So you are looking to find ${dialog.result} ?
 # SendActivity_fDGbvm()
 -
-# TextInput_Prompt_SPOmv3()
-- What room are you looking for ?
 # SendActivity_M5S9AJ()
 - This room is located in the main building
 # TextInput_UnrecognizedPrompt_SPOmv3()
 -  Couldn't recognize
-# SendActivity_tevGpA()
-- This room is located on UCM Building from Hajdoczyho street
+# SendActivity_PZ6M1e()
+- This room is located on UCM Building from Hajdoczyho street.
+# SendActivity_cR3x8W()
+- Couldn't find room you are looking for
+- Could you please try again ?
+# TextInput_Prompt_SPOmv3()
+-What room are you looking for ?
+
+
+
+# ChoiceInput_Prompt_8ch1IJ()
+- Please select from teachers below
+# SendActivity_E5P9P1()
+- Hostovecky is located on the third floor of main UCM building .Email: marian.hostovecky@ucm.sk
+ -Room: 3.15
+ -Telephone number: +421944091433
+
+
+
