@@ -14,6 +14,7 @@ This project includes a script that can be used to provision the resources neces
 * Run `node provisionComposer.js --subscriptionId=<YOUR AZURE SUBSCRIPTION ID> --name=<NAME OF YOUR RESOURCE GROUP> --appPassword=<APP PASSWORD> --environment=<NAME FOR ENVIRONMENT DEFAULT to dev>`
 * You will be asked to login to the Azure portal in your browser.
 * You will see progress indicators as the provision process runs. Note that it will take roughly 10 minutes to fully provision the resources.
+node provisionComposer.js --subscriptionId=60dccb65-bce6-4874-b649-e2ac2f262005 --name=KaiBotComposer --appPassword=Pondelok1 --environment=<NAME FOR ENVIRONMENT DEFAULT to dev>
 
 It will look like this:
 ```

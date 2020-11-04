@@ -1,0 +1,126 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "pKWumw",
+    "name": "RoomDialog",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "1lwOwV"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "zeDDP3"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_zeDDP3()}",
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_zeDDP3()}",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "dialog.result"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "GIJKGk"
+          },
+          "elseActions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "zD47zP"
+              },
+              "condition": "contains(dialog.result,\"PMH\")",
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "iP6RDK"
+                  },
+                  "activity": "${SendActivity_iP6RDK()}"
+                }
+              ],
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "sodaS1"
+                  },
+                  "activity": "${SendActivity_sodaS1()}"
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "PS4EB2"
+              },
+              "activity": "${SendActivity_PS4EB2()}"
+            }
+          ],
+          "condition": "(contains(dialog.result,\"UCPC\") || contains(dialog.result,\"SMS\"))"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "xHffrA"
+          },
+          "property": "conversation.roomnumber",
+          "value": "=split(dialog.result,\",\")"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "W9cUlx"
+          },
+          "activity": "${SendActivity_W9cUlx()}"
+        },
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "MFFF5C"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ConfirmInput_Prompt_MFFF5C()}",
+          "unrecognizedPrompt": "${ConfirmInput_UnrecognizedPrompt_MFFF5C()}",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or "
+          },
+          "property": "conversation.confirmation",
+          "style": "heroCard",
+          "confirmChoices": [
+            "Yes",
+            "No"
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "RoomDialog.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": []
+  },
+  "id": "RoomDialog"
+}

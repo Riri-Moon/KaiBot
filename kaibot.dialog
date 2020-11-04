@@ -21,6 +21,71 @@
             "id": "klsNF8"
           },
           "activity": "${SendActivity_klsNF8()}"
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "f9QxVJ"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_f9QxVJ()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "style": "heroCard",
+          "choices": [
+            "Find you rooms in our school",
+            "Find you a teacher",
+            "Create an appointment with teacher",
+            "Tell you about school"
+          ],
+          "outputFormat": "index",
+          "property": "conversation.choice"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "vXzBnY"
+          },
+          "condition": "conversation.choice",
+          "cases": [
+            {
+              "value": "1",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "nixKY0"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "TeacherDialog"
+                }
+              ]
+            },
+            {
+              "value": "0",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "So4bVG"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "RoomDialog"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -104,6 +169,46 @@
             }
           ],
           "condition": "(contains(dialog.result,\"UCPC\") || contains(dialog.result,\"SMS\"))"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "2q9Sju"
+          },
+          "property": "conversation.roomnumber",
+          "value": "=split(dialog.result,\",\")"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "pogwKn"
+          },
+          "activity": "${SendActivity_pogwKn()}"
+        },
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "cKCnps"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ConfirmInput_Prompt_cKCnps()}",
+          "unrecognizedPrompt": "${ConfirmInput_UnrecognizedPrompt_cKCnps()}",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or "
+          },
+          "property": "conversation.confirmation",
+          "style": "heroCard",
+          "confirmChoices": [
+            "Yes",
+            "No"
+          ]
         }
       ]
     },
@@ -118,13 +223,14 @@
         {
           "$kind": "Microsoft.ChoiceInput",
           "$designer": {
-            "id": "8ch1IJ"
+            "id": "EPqBEl"
           },
           "defaultLocale": "en-us",
           "disabled": false,
           "maxTurnCount": 3,
           "alwaysPrompt": false,
           "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_EPqBEl()}",
           "unrecognizedPrompt": "",
           "invalidPrompt": "",
           "defaultValueResponse": "",
@@ -134,40 +240,417 @@
             "inlineOr": " or ",
             "inlineSeparator": ", "
           },
-          "property": "user.style",
-          "outputFormat": "index",
+          "property": "conversation.faculty",
           "style": "heroCard",
           "choices": [
-            "Hostovecky",
-            "Jurinova",
-            "Olvecky"
+            "FPV",
+            "FSV",
+            "FMK"
           ],
-          "prompt": "${ChoiceInput_Prompt_8ch1IJ()}"
+          "outputFormat": "index"
         },
         {
           "$kind": "Microsoft.SwitchCondition",
           "$designer": {
-            "id": "ZORfJy"
+            "id": "e6kfN2"
           },
-          "condition": "user.style",
+          "condition": "conversation.faculty",
           "cases": [
             {
-              "value": 0,
+              "value": "0",
               "actions": [
                 {
-                  "$kind": "Microsoft.SendActivity",
+                  "$kind": "Microsoft.ChoiceInput",
                   "$designer": {
-                    "id": "E5P9P1"
+                    "id": "746Sob"
                   },
-                  "activity": "${SendActivity_E5P9P1()}"
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or ",
+                    "inlineSeparator": ", "
+                  },
+                  "property": "user.style",
+                  "outputFormat": "index",
+                  "style": "heroCard",
+                  "choices": [
+                    "Hostovecky",
+                    "Jurinova",
+                    "Olvecky"
+                  ],
+                  "prompt": "${ChoiceInput_Prompt_746Sob()}"
+                },
+                {
+                  "$kind": "Microsoft.SwitchCondition",
+                  "$designer": {
+                    "id": "uJ047e"
+                  },
+                  "condition": "user.style",
+                  "cases": [
+                    {
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "SGxMlm"
+                          },
+                          "activity": "${SendActivity_SGxMlm()}"
+                        },
+                        {
+                          "$kind": "Microsoft.ConfirmInput",
+                          "$designer": {
+                            "id": "rseYDg"
+                          },
+                          "defaultLocale": "en-us",
+                          "disabled": false,
+                          "maxTurnCount": 3,
+                          "alwaysPrompt": false,
+                          "allowInterruptions": false,
+                          "prompt": "${ConfirmInput_Prompt_rseYDg()}",
+                          "unrecognizedPrompt": "",
+                          "invalidPrompt": "${ConfirmInput_InvalidPrompt_rseYDg()}",
+                          "defaultValueResponse": "",
+                          "choiceOptions": {
+                            "includeNumbers": true,
+                            "inlineOrMore": ", or ",
+                            "inlineOr": " or ",
+                            "inlineSeparator": ", "
+                          },
+                          "property": "conversation.consultation",
+                          "style": "heroCard",
+                          "confirmChoices": [
+                            "Yes",
+                            "No"
+                          ]
+                        },
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "hO3gf2"
+                          },
+                          "activity": "${SendActivity_hO3gf2()}"
+                        },
+                        {
+                          "$kind": "Microsoft.IfCondition",
+                          "$designer": {
+                            "id": "cKoc4H"
+                          },
+                          "condition": "conversation.consultation",
+                          "elseActions": [
+                            {
+                              "$kind": "Microsoft.BreakLoop",
+                              "$designer": {
+                                "id": "phLVaO"
+                              }
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.SendActivity",
+                              "$designer": {
+                                "id": "xcJMKE"
+                              },
+                              "activity": "${SendActivity_xcJMKE()}"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "x3c9Zp"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_x3c9Zp()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.name"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "OGBhRn"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_OGBhRn()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "${TextInput_InvalidPrompt_OGBhRn()}",
+                              "defaultValueResponse": "",
+                              "property": "user.email",
+                              "validations": [
+                                "contains(this.value,\"@\")"
+                              ]
+                            },
+                            {
+                              "$kind": "Microsoft.DateTimeInput",
+                              "$designer": {
+                                "id": "ccTzOC"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${DateTimeInput_Prompt_ccTzOC()}",
+                              "unrecognizedPrompt": "${DateTimeInput_UnrecognizedPrompt_ccTzOC()}",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.date"
+                            },
+                            {
+                              "$kind": "Microsoft.ConfirmInput",
+                              "$designer": {
+                                "id": "nyiTfk"
+                              },
+                              "defaultLocale": "en-us",
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${ConfirmInput_Prompt_nyiTfk()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "choiceOptions": {
+                                "includeNumbers": true,
+                                "inlineOrMore": ", or "
+                              },
+                              "property": "conversation.attachmentsConf",
+                              "style": "heroCard",
+                              "confirmChoices": [
+                                "Yes",
+                                "No"
+                              ]
+                            },
+                            {
+                              "$kind": "Microsoft.IfCondition",
+                              "$designer": {
+                                "id": "qRxfei"
+                              },
+                              "condition": "conversation.attachmentsConf",
+                              "actions": [
+                                {
+                                  "$kind": "Microsoft.AttachmentInput",
+                                  "$designer": {
+                                    "id": "OJx99I"
+                                  },
+                                  "disabled": false,
+                                  "maxTurnCount": 3,
+                                  "alwaysPrompt": false,
+                                  "allowInterruptions": false,
+                                  "prompt": "${AttachmentInput_Prompt_OJx99I()}",
+                                  "unrecognizedPrompt": "",
+                                  "invalidPrompt": "",
+                                  "defaultValueResponse": "",
+                                  "property": "dialog.attachments"
+                                }
+                              ]
+                            },
+                            {
+                              "$kind": "Microsoft.HttpRequest",
+                              "$designer": {
+                                "id": "Kxyaom"
+                              },
+                              "method": "POST",
+                              "responseType": "json",
+                              "url": "https://api.sendgrid.com/v3/mail/send",
+                              "headers": {
+                                "Authorization": "Bearer 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",
+                                "Content-Type": "application/json"
+                              },
+                              "body": {
+                                "personalizations": [
+                                  {
+                                    "to": [
+                                      {
+                                        "email": "r.baricic1@gmail.com"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "from": {
+                                  "email": "${user.email}"
+                                },
+                                "subject": "Konzultácia - ${user.name}",
+                                "content": [
+                                  {
+                                    "type": "text/plain",
+                                    "value": "Dobrý deň, rád by som prišiel na konzultáciu dňa ${user.date[0].value}"
+                                  }
+                                ]
+                              },
+                              "resultProperty": "dialog.EmailSResponse",
+                              "contentType": "application/json"
+                            },
+                            {
+                              "$kind": "Microsoft.IfCondition",
+                              "$designer": {
+                                "id": "fFjuNm"
+                              },
+                              "condition": "dialog.EmailSResponse.statusCode==202",
+                              "actions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "OiFAE7"
+                                  },
+                                  "activity": "${SendActivity_OiFAE7()}"
+                                }
+                              ],
+                              "elseActions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "28rJLU"
+                                  },
+                                  "activity": "${SendActivity_28rJLU()}"
+                                },
+                                {
+                                  "$kind": "Microsoft.RepeatDialog",
+                                  "$designer": {
+                                    "id": "F7AaCj"
+                                  },
+                                  "activityProcessed": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "value": "0"
+                    },
+                    {
+                      "actions": [],
+                      "value": "1"
+                    },
+                    {
+                      "actions": [],
+                      "value": "2"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "value": 1
+              "value": "1",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "TlhjuR"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or ",
+                    "inlineSeparator": ", "
+                  },
+                  "property": "user.style",
+                  "outputFormat": "index",
+                  "style": "heroCard",
+                  "choices": [
+                    "Clovek",
+                    "Clovek2",
+                    "Clovek3"
+                  ],
+                  "prompt": "${ChoiceInput_Prompt_TlhjuR()}"
+                },
+                {
+                  "$kind": "Microsoft.SwitchCondition",
+                  "$designer": {
+                    "id": "YPBejX"
+                  },
+                  "condition": "user.style",
+                  "cases": [
+                    {
+                      "value": 0,
+                      "actions": []
+                    },
+                    {
+                      "value": 1,
+                      "actions": []
+                    },
+                    {
+                      "value": 2,
+                      "actions": []
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "value": 2
+              "value": "2",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "v6uNGC"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or ",
+                    "inlineSeparator": ", "
+                  },
+                  "property": "user.style",
+                  "outputFormat": "index",
+                  "style": "heroCard",
+                  "choices": [
+                    "Clovek4",
+                    "Clovek5",
+                    "Clovek6"
+                  ],
+                  "prompt": "${ChoiceInput_Prompt_v6uNGC()}"
+                },
+                {
+                  "$kind": "Microsoft.SwitchCondition",
+                  "$designer": {
+                    "id": "kHo7mu"
+                  },
+                  "condition": "user.style",
+                  "cases": [
+                    {
+                      "value": 0,
+                      "actions": []
+                    },
+                    {
+                      "value": 1,
+                      "actions": []
+                    },
+                    {
+                      "value": 2,
+                      "actions": []
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -190,5 +673,5 @@
       }
     ]
   },
-  "autoEndDialog": false
+  "autoEndDialog": true
 }

@@ -1,0 +1,22 @@
+[import](common.lg)
+
+# TextInput_Prompt_zeDDP3()
+-What room are you looking for ? Split Name and Number by character ","
+
+# TextInput_UnrecognizedPrompt_zeDDP3()
+-  Couldn't recognize
+# SendActivity_PS4EB2()
+- This room is located in the FPV main building
+# SendActivity_sodaS1()
+- This room is located on UCM Building on Hajdoczyho street.
+# SendActivity_iP6RDK()
+- Couldn't find room you are looking for.
+- Could you please try again ?
+- There's possibility that this room isn't located in one of our buildings.
+
+# SendActivity_W9cUlx()
+- Floor number : ${substring(last(conversation.roomnumber) ,0 ,1) }
+# ConfirmInput_Prompt_MFFF5C()
+- Want more precise steps to get into the room?
+# ConfirmInput_UnrecognizedPrompt_MFFF5C()
+- I don't recognize that as answer, sorry. Please try again

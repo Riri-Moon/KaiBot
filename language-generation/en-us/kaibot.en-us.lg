@@ -5,31 +5,84 @@
 - Sorry, I do not understand.
 # SendActivity_klsNF8()
 - ${WelcomeUser()}
-
 # SendActivity_oCkLu7()
 - So you are looking to find ${dialog.result} ?
 # SendActivity_fDGbvm()
 -
 # SendActivity_M5S9AJ()
-- This room is located in the main building
+- This room is located in the FPV main building
 # TextInput_UnrecognizedPrompt_SPOmv3()
 -  Couldn't recognize
 # SendActivity_PZ6M1e()
-- This room is located on UCM Building from Hajdoczyho street.
+- This room is located on UCM Building on Hajdoczyho street.
 # SendActivity_cR3x8W()
-- Couldn't find room you are looking for
+- Couldn't find room you are looking for.
 - Could you please try again ?
+- There's possibility that this room isn't located in one of our buildings.
+
 # TextInput_Prompt_SPOmv3()
--What room are you looking for ?
+-What room are you looking for ? Split Name and Number by character ","
+
+# Email_Hostovecky()
+- ${HostoveckyEmail()}
 
 
 
-# ChoiceInput_Prompt_8ch1IJ()
+
+
+
+# SendActivity_783LwX()
+- ${dialog.RoomNumber}
+# SendActivity_pogwKn()
+- Floor number : ${substring(last(conversation.roomnumber) ,0 ,1) }
+# ConfirmInput_Prompt_cKCnps()
+- Want more precise steps to get into the room?
+# ConfirmInput_UnrecognizedPrompt_cKCnps()
+- I don't recognize that as answer, sorry. Please try again
+# ChoiceInput_Prompt_EPqBEl()
+- On which faculty should teacher be located ?
+# ChoiceInput_Prompt_746Sob()
 - Please select from teachers below
-# SendActivity_E5P9P1()
-- Hostovecky is located on the third floor of main UCM building .Email: marian.hostovecky@ucm.sk
- -Room: 3.15
- -Telephone number: +421944091433
+# ChoiceInput_Prompt_TlhjuR()
+- Please select from teachers below
+# ChoiceInput_Prompt_v6uNGC()
+- Please select from teachers below
+# SendActivity_SGxMlm()
+- Mr. Hostovecky is located in the main FPV building.  \n\n Room: 3.15 \n\n  Telephone number: +4219XXXXXXXX \n\n Email: marian.hostovecky@ucm.sk \n\n His consultation hours are every Monday 10:00-14:00
 
 
 
+
+
+
+# ConfirmInput_Prompt_rseYDg()
+- Do you wish to create an appointment outside of the consultation hours ?
+# ConfirmInput_InvalidPrompt_rseYDg()
+- I didn't recognize this answer. Could you please try again ?
+# SendActivity_xcJMKE()
+- Since you selected "Yes", I will need to ask you several questions. \n\n None of the data that you enter will be stored. It will be only used for creating an appointment.
+# TextInput_Prompt_x3c9Zp()
+-  Firstly, please state your full name
+# TextInput_Prompt_OGBhRn()
+- What is your email address ?
+# TextInput_InvalidPrompt_OGBhRn()
+- This email address is not valid.
+
+# SendActivity_hO3gf2()
+- ${conversation.consultation}
+# AttachmentInput_Prompt_OJx99I()
+- Please insert attachments (Work in progress)
+# ConfirmInput_Prompt_nyiTfk()
+- Do you wish to add some attachments for selected teacher ?
+# SendActivity_NSjpMs()
+- ${dialog.EmailSResponse}
+# SendActivity_OiFAE7()
+- Email was successfully send to the recipient.
+# DateTimeInput_Prompt_ccTzOC()
+- When would you like to create an appointment ? \n\n Insert date in format DD.MM.YYYY
+# SendActivity_28rJLU()
+- I have encountered some issue, we will need to do it one more time. I am so sorry.
+- Something happend, I really do not know what so we need to start over. I am so sorry.
+
+# ChoiceInput_Prompt_f9QxVJ()
+- There are few thing that I can help you with
