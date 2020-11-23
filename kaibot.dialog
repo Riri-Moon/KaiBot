@@ -692,11 +692,18 @@
               "value": "Employees"
             }
           ],
+<<<<<<< Updated upstream
           "style": "auto",
           "value": "Choice",
           "property": "Property_Choice",
           "recognizerOptions": {
             "recognizeOrdinals": true
+=======
+          "prompt": "${ChoiceInput_Prompt_8ch1IJ()}",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+>>>>>>> Stashed changes
           }
         },
         {
@@ -752,6 +759,22 @@
           }
         }
       ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "wMfL32",
+        "name": "AboutSchool"
+      },
+      "intent": "AboutSchool"
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "wMtVzI",
+        "name": "FAQ"
+      },
+      "intent": "FAQ"
     }
   ],
   "$schema": "https://raw.githubusercontent.com/microsoft/BotFramework-Composer/stable/Composer/packages/server/schemas/sdk.schema",
@@ -769,8 +792,17 @@
         "pattern": "Teacher"
       },
       {
+<<<<<<< Updated upstream
         "intent": "FAQ",
         "pattern": "FAQ"
+=======
+        "intent": "AboutSchool",
+        "pattern": "about school"
+      },
+      {
+        "intent": "FAQ",
+        "pattern": "faq"
+>>>>>>> Stashed changes
       }
     ]
   },
