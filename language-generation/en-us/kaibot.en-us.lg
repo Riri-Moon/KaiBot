@@ -117,8 +117,6 @@
 # ChoiceInput_Prompt_f9QxVJ()
 - There are few thing that I can help you with
 
-
-
 # ChoiceInput_Prompt_B4oOtQ()
 - Please  select your FAQ
 # SendActivity_nLwAbM()
@@ -141,11 +139,13 @@
 # SendActivity_5J9GLb()
 -All you need to know about submitting your application step by step you can find on website:  
 
--https://www.ucm.sk/en/admissions/
 # SendActivity_vVPJdD()
-- Specific employee or director of department can be find by our evidence system:
+- Specific employee or director of department can be find by our evidence system:\n\nhttps://www.ucm.sk/en/directory/
 
--https://www.ucm.sk/en/directory/
+
+
+
+
 
 - test3
 # SendActivity_yDyQib()
@@ -500,14 +500,6 @@
 # DateTimeInput_UnrecognizedPrompt_626xy9()
 -${DateTimeInput_UnrecognizedPrompt_ccTzOC()}
 # SendActivity_TQgTA0()
-- Email was successfully send to the recipient.
-# SendActivity_2ZsjRX()
-- I have encountered some issue, we will need to do it one more time. I am so sorry.
-- Something happend, I really do not know what so we need to start over. I am so sorry.
-
-# DateTimeInput_UnrecognizedPrompt_q9LWGT()
--
 # DateTimeInput_UnrecognizedPrompt_ccTzOC()
 - 
->>>>>>> Stashed changes
->>>>>>> parent of 3de6a80... Revert "23.11"
+
