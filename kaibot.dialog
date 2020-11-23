@@ -247,7 +247,10 @@
             "FSV",
             "FMK"
           ],
-          "outputFormat": "index"
+          "outputFormat": "index",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
         },
         {
           "$kind": "Microsoft.SwitchCondition",
@@ -282,11 +285,23 @@
                   "outputFormat": "index",
                   "style": "heroCard",
                   "choices": [
-                    "Hostovecky",
-                    "Jurinova",
-                    "Olvecky"
+                    "Mgr. Marián Hosťovecký, PhD.",
+                    "Ing. Jana Jurinová, PhD.",
+                    "PaedDr. Miroslav Ölvecký, PhD.",
+                    "doc. Ing. Michal Čerňanský, PhD.",
+                    "doc. RNDr. Iveta Dirgová Luptáková, PhD.",
+                    "Ing. Miroslav Beňo, PhD.",
+                    "Ing. Darja Gabriška, PhD.",
+                    "prof. RNDr. Jiří Pospíchal, DrSc.",
+                    "prof. Ing. Vladimír Kvasnička, DrSc., emeritný profesor",
+                    "doc. RNDr. PaedDr. Ladislav Huraj, PhD., mimoriadny profesor",
+                    "Ing. Katarína Pribilová, PhD.",
+                    "Ing. Marek Šimon, PhD."
                   ],
-                  "prompt": "${ChoiceInput_Prompt_746Sob()}"
+                  "prompt": "${ChoiceInput_Prompt_746Sob()}",
+                  "recognizerOptions": {
+                    "recognizeOrdinals": true
+                  }
                 },
                 {
                   "$kind": "Microsoft.SwitchCondition",
@@ -482,12 +497,2049 @@
                       "value": "0"
                     },
                     {
-                      "actions": [],
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "EEn2nV"
+                          },
+                          "activity": "${SendActivity_EEn2nV()}"
+                        },
+                        {
+                          "$kind": "Microsoft.ConfirmInput",
+                          "$designer": {
+                            "id": "ZgSnsT"
+                          },
+                          "defaultLocale": "en-us",
+                          "disabled": false,
+                          "maxTurnCount": 3,
+                          "alwaysPrompt": false,
+                          "allowInterruptions": false,
+                          "prompt": "${ConfirmInput_Prompt_ZgSnsT()}",
+                          "unrecognizedPrompt": "",
+                          "invalidPrompt": "${ConfirmInput_InvalidPrompt_ZgSnsT()}",
+                          "defaultValueResponse": "",
+                          "choiceOptions": {
+                            "includeNumbers": true,
+                            "inlineOrMore": ", or ",
+                            "inlineOr": " or ",
+                            "inlineSeparator": ", "
+                          },
+                          "property": "conversation.consultation",
+                          "style": "heroCard",
+                          "confirmChoices": [
+                            "Yes",
+                            "No"
+                          ]
+                        },
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "G07F4p"
+                          },
+                          "activity": "${SendActivity_G07F4p()}"
+                        },
+                        {
+                          "$kind": "Microsoft.IfCondition",
+                          "$designer": {
+                            "id": "UBoJ1U"
+                          },
+                          "condition": "conversation.consultation",
+                          "elseActions": [
+                            {
+                              "$kind": "Microsoft.BreakLoop",
+                              "$designer": {
+                                "id": "FRljYj"
+                              }
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.SendActivity",
+                              "$designer": {
+                                "id": "ktflBd"
+                              },
+                              "activity": "${SendActivity_ktflBd()}"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "oj48K8"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_oj48K8()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.name"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "pZic1F"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_pZic1F()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "${TextInput_InvalidPrompt_pZic1F()}",
+                              "defaultValueResponse": "",
+                              "property": "user.email",
+                              "validations": [
+                                "contains(this.value,\"@\")"
+                              ]
+                            },
+                            {
+                              "$kind": "Microsoft.DateTimeInput",
+                              "$designer": {
+                                "id": "76o0ne"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${DateTimeInput_Prompt_76o0ne()}",
+                              "unrecognizedPrompt": "${DateTimeInput_UnrecognizedPrompt_76o0ne()}",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.date"
+                            },
+                            {
+                              "$kind": "Microsoft.HttpRequest",
+                              "$designer": {
+                                "id": "bfbNDi"
+                              },
+                              "method": "POST",
+                              "responseType": "json",
+                              "url": "https://api.sendgrid.com/v3/mail/send",
+                              "headers": {
+                                "Authorization": "Bearer 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",
+                                "Content-Type": "application/json"
+                              },
+                              "body": {
+                                "personalizations": [
+                                  {
+                                    "to": [
+                                      {
+                                        "email": "r.baricic1@gmail.com"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "from": {
+                                  "email": "${user.email}"
+                                },
+                                "subject": "Konzultácia - ${user.name}",
+                                "content": [
+                                  {
+                                    "type": "text/plain",
+                                    "value": "Dobrý deň, rád by som prišiel na konzultáciu dňa ${user.date[0].value}"
+                                  }
+                                ]
+                              },
+                              "resultProperty": "dialog.EmailSResponse",
+                              "contentType": "application/json"
+                            },
+                            {
+                              "$kind": "Microsoft.IfCondition",
+                              "$designer": {
+                                "id": "z4WSNM"
+                              },
+                              "condition": "dialog.EmailSResponse.statusCode==202",
+                              "actions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "4w4Q34"
+                                  },
+                                  "activity": "${SendActivity_4w4Q34()}"
+                                }
+                              ],
+                              "elseActions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "P9RRvG"
+                                  },
+                                  "activity": "${SendActivity_P9RRvG()}"
+                                },
+                                {
+                                  "$kind": "Microsoft.RepeatDialog",
+                                  "$designer": {
+                                    "id": "AqPaBh"
+                                  },
+                                  "activityProcessed": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
                       "value": "1"
                     },
                     {
-                      "actions": [],
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "yDyQib"
+                          },
+                          "activity": "${SendActivity_yDyQib()}"
+                        },
+                        {
+                          "$kind": "Microsoft.ConfirmInput",
+                          "$designer": {
+                            "id": "PodBex"
+                          },
+                          "defaultLocale": "en-us",
+                          "disabled": false,
+                          "maxTurnCount": 3,
+                          "alwaysPrompt": false,
+                          "allowInterruptions": false,
+                          "prompt": "${ConfirmInput_Prompt_PodBex()}",
+                          "unrecognizedPrompt": "",
+                          "invalidPrompt": "${ConfirmInput_InvalidPrompt_PodBex()}",
+                          "defaultValueResponse": "",
+                          "choiceOptions": {
+                            "includeNumbers": true,
+                            "inlineOrMore": ", or ",
+                            "inlineOr": " or ",
+                            "inlineSeparator": ", "
+                          },
+                          "property": "conversation.consultation",
+                          "style": "heroCard",
+                          "confirmChoices": [
+                            "Yes",
+                            "No"
+                          ]
+                        },
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "9t5NWJ"
+                          },
+                          "activity": "${SendActivity_9t5NWJ()}"
+                        },
+                        {
+                          "$kind": "Microsoft.IfCondition",
+                          "$designer": {
+                            "id": "IfTjf3"
+                          },
+                          "condition": "conversation.consultation",
+                          "elseActions": [
+                            {
+                              "$kind": "Microsoft.BreakLoop",
+                              "$designer": {
+                                "id": "zFga81"
+                              }
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.SendActivity",
+                              "$designer": {
+                                "id": "PgeeHX"
+                              },
+                              "activity": "${SendActivity_PgeeHX()}"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "v4yU5w"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_v4yU5w()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.name"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "hACXBI"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_hACXBI()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "${TextInput_InvalidPrompt_hACXBI()}",
+                              "defaultValueResponse": "",
+                              "property": "user.email",
+                              "validations": [
+                                "contains(this.value,\"@\")"
+                              ]
+                            },
+                            {
+                              "$kind": "Microsoft.DateTimeInput",
+                              "$designer": {
+                                "id": "STVNDM"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${DateTimeInput_Prompt_STVNDM()}",
+                              "unrecognizedPrompt": "${DateTimeInput_UnrecognizedPrompt_STVNDM()}",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.date"
+                            },
+                            {
+                              "$kind": "Microsoft.HttpRequest",
+                              "$designer": {
+                                "id": "M91DTb"
+                              },
+                              "method": "POST",
+                              "responseType": "json",
+                              "url": "https://api.sendgrid.com/v3/mail/send",
+                              "headers": {
+                                "Authorization": "Bearer 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",
+                                "Content-Type": "application/json"
+                              },
+                              "body": {
+                                "personalizations": [
+                                  {
+                                    "to": [
+                                      {
+                                        "email": "r.baricic1@gmail.com"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "from": {
+                                  "email": "${user.email}"
+                                },
+                                "subject": "Konzultácia - ${user.name}",
+                                "content": [
+                                  {
+                                    "type": "text/plain",
+                                    "value": "Dobrý deň, rád by som prišiel na konzultáciu dňa ${user.date[0].value}"
+                                  }
+                                ]
+                              },
+                              "resultProperty": "dialog.EmailSResponse",
+                              "contentType": "application/json"
+                            },
+                            {
+                              "$kind": "Microsoft.IfCondition",
+                              "$designer": {
+                                "id": "gXnbIj"
+                              },
+                              "condition": "dialog.EmailSResponse.statusCode==202",
+                              "actions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "9Z1EuB"
+                                  },
+                                  "activity": "${SendActivity_9Z1EuB()}"
+                                }
+                              ],
+                              "elseActions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "A49LoT"
+                                  },
+                                  "activity": "${SendActivity_A49LoT()}"
+                                },
+                                {
+                                  "$kind": "Microsoft.RepeatDialog",
+                                  "$designer": {
+                                    "id": "avR2Uz"
+                                  },
+                                  "activityProcessed": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
                       "value": "2"
+                    },
+                    {
+                      "value": "3",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "XZGE0g"
+                          },
+                          "activity": "${SendActivity_XZGE0g()}"
+                        },
+                        {
+                          "$kind": "Microsoft.ConfirmInput",
+                          "$designer": {
+                            "id": "qipBmP"
+                          },
+                          "defaultLocale": "en-us",
+                          "disabled": false,
+                          "maxTurnCount": 3,
+                          "alwaysPrompt": false,
+                          "allowInterruptions": false,
+                          "prompt": "${ConfirmInput_Prompt_qipBmP()}",
+                          "unrecognizedPrompt": "",
+                          "invalidPrompt": "${ConfirmInput_InvalidPrompt_qipBmP()}",
+                          "defaultValueResponse": "",
+                          "choiceOptions": {
+                            "includeNumbers": true,
+                            "inlineOrMore": ", or ",
+                            "inlineOr": " or ",
+                            "inlineSeparator": ", "
+                          },
+                          "property": "conversation.consultation",
+                          "style": "heroCard",
+                          "confirmChoices": [
+                            "Yes",
+                            "No"
+                          ]
+                        },
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "W6PT2e"
+                          },
+                          "activity": "${SendActivity_W6PT2e()}"
+                        },
+                        {
+                          "$kind": "Microsoft.IfCondition",
+                          "$designer": {
+                            "id": "18epGB"
+                          },
+                          "condition": "conversation.consultation",
+                          "elseActions": [
+                            {
+                              "$kind": "Microsoft.BreakLoop",
+                              "$designer": {
+                                "id": "axwRNG"
+                              }
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.SendActivity",
+                              "$designer": {
+                                "id": "GFTt2m"
+                              },
+                              "activity": "${SendActivity_GFTt2m()}"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "aRVMhQ"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_aRVMhQ()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.name"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "Bw6TkH"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_Bw6TkH()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "${TextInput_InvalidPrompt_Bw6TkH()}",
+                              "defaultValueResponse": "",
+                              "property": "user.email",
+                              "validations": [
+                                "contains(this.value,\"@\")"
+                              ]
+                            },
+                            {
+                              "$kind": "Microsoft.DateTimeInput",
+                              "$designer": {
+                                "id": "vSxrHg"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${DateTimeInput_Prompt_vSxrHg()}",
+                              "unrecognizedPrompt": "${DateTimeInput_UnrecognizedPrompt_vSxrHg()}",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.date"
+                            },
+                            {
+                              "$kind": "Microsoft.HttpRequest",
+                              "$designer": {
+                                "id": "uXEuJW"
+                              },
+                              "method": "POST",
+                              "responseType": "json",
+                              "url": "https://api.sendgrid.com/v3/mail/send",
+                              "headers": {
+                                "Authorization": "Bearer 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",
+                                "Content-Type": "application/json"
+                              },
+                              "body": {
+                                "personalizations": [
+                                  {
+                                    "to": [
+                                      {
+                                        "email": "r.baricic1@gmail.com"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "from": {
+                                  "email": "${user.email}"
+                                },
+                                "subject": "Konzultácia - ${user.name}",
+                                "content": [
+                                  {
+                                    "type": "text/plain",
+                                    "value": "Dobrý deň, rád by som prišiel na konzultáciu dňa ${user.date[0].value}"
+                                  }
+                                ]
+                              },
+                              "resultProperty": "dialog.EmailSResponse",
+                              "contentType": "application/json"
+                            },
+                            {
+                              "$kind": "Microsoft.IfCondition",
+                              "$designer": {
+                                "id": "kuRzjk"
+                              },
+                              "condition": "dialog.EmailSResponse.statusCode==202",
+                              "actions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "YyxTef"
+                                  },
+                                  "activity": "${SendActivity_YyxTef()}"
+                                }
+                              ],
+                              "elseActions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "V6u1ro"
+                                  },
+                                  "activity": "${SendActivity_V6u1ro()}"
+                                },
+                                {
+                                  "$kind": "Microsoft.RepeatDialog",
+                                  "$designer": {
+                                    "id": "RS58dC"
+                                  },
+                                  "activityProcessed": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "value": "4",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "J5Z170"
+                          },
+                          "activity": "${SendActivity_J5Z170()}"
+                        },
+                        {
+                          "$kind": "Microsoft.ConfirmInput",
+                          "$designer": {
+                            "id": "34KGj4"
+                          },
+                          "defaultLocale": "en-us",
+                          "disabled": false,
+                          "maxTurnCount": 3,
+                          "alwaysPrompt": false,
+                          "allowInterruptions": false,
+                          "prompt": "${ConfirmInput_Prompt_34KGj4()}",
+                          "unrecognizedPrompt": "",
+                          "invalidPrompt": "${ConfirmInput_InvalidPrompt_34KGj4()}",
+                          "defaultValueResponse": "",
+                          "choiceOptions": {
+                            "includeNumbers": true,
+                            "inlineOrMore": ", or ",
+                            "inlineOr": " or ",
+                            "inlineSeparator": ", "
+                          },
+                          "property": "conversation.consultation",
+                          "style": "heroCard",
+                          "confirmChoices": [
+                            "Yes",
+                            "No"
+                          ]
+                        },
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "WvEhLR"
+                          },
+                          "activity": "${SendActivity_WvEhLR()}"
+                        },
+                        {
+                          "$kind": "Microsoft.IfCondition",
+                          "$designer": {
+                            "id": "K6bRHP"
+                          },
+                          "condition": "conversation.consultation",
+                          "elseActions": [
+                            {
+                              "$kind": "Microsoft.BreakLoop",
+                              "$designer": {
+                                "id": "gw8SeN"
+                              }
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.SendActivity",
+                              "$designer": {
+                                "id": "qLV0r6"
+                              },
+                              "activity": "${SendActivity_qLV0r6()}"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "t6AydC"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_t6AydC()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.name"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "G2zcHP"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_G2zcHP()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "${TextInput_InvalidPrompt_G2zcHP()}",
+                              "defaultValueResponse": "",
+                              "property": "user.email",
+                              "validations": [
+                                "contains(this.value,\"@\")"
+                              ]
+                            },
+                            {
+                              "$kind": "Microsoft.DateTimeInput",
+                              "$designer": {
+                                "id": "D8GJAX"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${DateTimeInput_Prompt_D8GJAX()}",
+                              "unrecognizedPrompt": "${DateTimeInput_UnrecognizedPrompt_D8GJAX()}",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.date"
+                            },
+                            {
+                              "$kind": "Microsoft.HttpRequest",
+                              "$designer": {
+                                "id": "O7iF8f"
+                              },
+                              "method": "POST",
+                              "responseType": "json",
+                              "url": "https://api.sendgrid.com/v3/mail/send",
+                              "headers": {
+                                "Authorization": "Bearer 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",
+                                "Content-Type": "application/json"
+                              },
+                              "body": {
+                                "personalizations": [
+                                  {
+                                    "to": [
+                                      {
+                                        "email": "r.baricic1@gmail.com"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "from": {
+                                  "email": "${user.email}"
+                                },
+                                "subject": "Konzultácia - ${user.name}",
+                                "content": [
+                                  {
+                                    "type": "text/plain",
+                                    "value": "Dobrý deň, rád by som prišiel na konzultáciu dňa ${user.date[0].value}"
+                                  }
+                                ]
+                              },
+                              "resultProperty": "dialog.EmailSResponse",
+                              "contentType": "application/json"
+                            },
+                            {
+                              "$kind": "Microsoft.IfCondition",
+                              "$designer": {
+                                "id": "kE8nbV"
+                              },
+                              "condition": "dialog.EmailSResponse.statusCode==202",
+                              "actions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "JO7Np4"
+                                  },
+                                  "activity": "${SendActivity_JO7Np4()}"
+                                }
+                              ],
+                              "elseActions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "LkjEyt"
+                                  },
+                                  "activity": "${SendActivity_LkjEyt()}"
+                                },
+                                {
+                                  "$kind": "Microsoft.RepeatDialog",
+                                  "$designer": {
+                                    "id": "YfiOKb"
+                                  },
+                                  "activityProcessed": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "value": "5",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "BTsutF"
+                          },
+                          "activity": "${SendActivity_BTsutF()}"
+                        },
+                        {
+                          "$kind": "Microsoft.ConfirmInput",
+                          "$designer": {
+                            "id": "9AElE2"
+                          },
+                          "defaultLocale": "en-us",
+                          "disabled": false,
+                          "maxTurnCount": 3,
+                          "alwaysPrompt": false,
+                          "allowInterruptions": false,
+                          "prompt": "${ConfirmInput_Prompt_9AElE2()}",
+                          "unrecognizedPrompt": "",
+                          "invalidPrompt": "${ConfirmInput_InvalidPrompt_9AElE2()}",
+                          "defaultValueResponse": "",
+                          "choiceOptions": {
+                            "includeNumbers": true,
+                            "inlineOrMore": ", or ",
+                            "inlineOr": " or ",
+                            "inlineSeparator": ", "
+                          },
+                          "property": "conversation.consultation",
+                          "style": "heroCard",
+                          "confirmChoices": [
+                            "Yes",
+                            "No"
+                          ]
+                        },
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "zrIlqU"
+                          },
+                          "activity": "${SendActivity_zrIlqU()}"
+                        },
+                        {
+                          "$kind": "Microsoft.IfCondition",
+                          "$designer": {
+                            "id": "TDE9gE"
+                          },
+                          "condition": "conversation.consultation",
+                          "elseActions": [
+                            {
+                              "$kind": "Microsoft.BreakLoop",
+                              "$designer": {
+                                "id": "tl6ume"
+                              }
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.SendActivity",
+                              "$designer": {
+                                "id": "ONGU2G"
+                              },
+                              "activity": "${SendActivity_ONGU2G()}"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "EC9vY5"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_EC9vY5()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.name"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "eYaR4b"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_eYaR4b()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "${TextInput_InvalidPrompt_eYaR4b()}",
+                              "defaultValueResponse": "",
+                              "property": "user.email",
+                              "validations": [
+                                "contains(this.value,\"@\")"
+                              ]
+                            },
+                            {
+                              "$kind": "Microsoft.DateTimeInput",
+                              "$designer": {
+                                "id": "q9LWGT"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${DateTimeInput_Prompt_q9LWGT()}",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.date"
+                            },
+                            {
+                              "$kind": "Microsoft.HttpRequest",
+                              "$designer": {
+                                "id": "PPulBn"
+                              },
+                              "method": "POST",
+                              "responseType": "json",
+                              "url": "https://api.sendgrid.com/v3/mail/send",
+                              "headers": {
+                                "Authorization": "Bearer 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",
+                                "Content-Type": "application/json"
+                              },
+                              "body": {
+                                "personalizations": [
+                                  {
+                                    "to": [
+                                      {
+                                        "email": "r.baricic1@gmail.com"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "from": {
+                                  "email": "${user.email}"
+                                },
+                                "subject": "Konzultácia - ${user.name}",
+                                "content": [
+                                  {
+                                    "type": "text/plain",
+                                    "value": "Dobrý deň, rád by som prišiel na konzultáciu dňa ${user.date[0].value}"
+                                  }
+                                ]
+                              },
+                              "resultProperty": "dialog.EmailSResponse",
+                              "contentType": "application/json"
+                            },
+                            {
+                              "$kind": "Microsoft.IfCondition",
+                              "$designer": {
+                                "id": "eshxNx"
+                              },
+                              "condition": "dialog.EmailSResponse.statusCode==202",
+                              "actions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "JIgcud"
+                                  },
+                                  "activity": "${SendActivity_JIgcud()}"
+                                }
+                              ],
+                              "elseActions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "CbCUzl"
+                                  },
+                                  "activity": "${SendActivity_CbCUzl()}"
+                                },
+                                {
+                                  "$kind": "Microsoft.RepeatDialog",
+                                  "$designer": {
+                                    "id": "fFSTVS"
+                                  },
+                                  "activityProcessed": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "value": "6",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "uDLkjN"
+                          },
+                          "activity": "${SendActivity_uDLkjN()}"
+                        },
+                        {
+                          "$kind": "Microsoft.ConfirmInput",
+                          "$designer": {
+                            "id": "YC4lQ6"
+                          },
+                          "defaultLocale": "en-us",
+                          "disabled": false,
+                          "maxTurnCount": 3,
+                          "alwaysPrompt": false,
+                          "allowInterruptions": false,
+                          "prompt": "${ConfirmInput_Prompt_YC4lQ6()}",
+                          "unrecognizedPrompt": "",
+                          "invalidPrompt": "${ConfirmInput_InvalidPrompt_YC4lQ6()}",
+                          "defaultValueResponse": "",
+                          "choiceOptions": {
+                            "includeNumbers": true,
+                            "inlineOrMore": ", or ",
+                            "inlineOr": " or ",
+                            "inlineSeparator": ", "
+                          },
+                          "property": "conversation.consultation",
+                          "style": "heroCard",
+                          "confirmChoices": [
+                            "Yes",
+                            "No"
+                          ]
+                        },
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "W3OQuY"
+                          },
+                          "activity": "${SendActivity_W3OQuY()}"
+                        },
+                        {
+                          "$kind": "Microsoft.IfCondition",
+                          "$designer": {
+                            "id": "ZB6cZF"
+                          },
+                          "condition": "conversation.consultation",
+                          "elseActions": [
+                            {
+                              "$kind": "Microsoft.BreakLoop",
+                              "$designer": {
+                                "id": "hPLKye"
+                              }
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.SendActivity",
+                              "$designer": {
+                                "id": "Z2jYLi"
+                              },
+                              "activity": "${SendActivity_Z2jYLi()}"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "ME92D4"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_ME92D4()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.name"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "9DMyzQ"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_9DMyzQ()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "${TextInput_InvalidPrompt_9DMyzQ()}",
+                              "defaultValueResponse": "",
+                              "property": "user.email",
+                              "validations": [
+                                "contains(this.value,\"@\")"
+                              ]
+                            },
+                            {
+                              "$kind": "Microsoft.DateTimeInput",
+                              "$designer": {
+                                "id": "NWyJce"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${DateTimeInput_Prompt_NWyJce()}",
+                              "unrecognizedPrompt": "${DateTimeInput_UnrecognizedPrompt_NWyJce()}",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.date"
+                            },
+                            {
+                              "$kind": "Microsoft.HttpRequest",
+                              "$designer": {
+                                "id": "WzRt6w"
+                              },
+                              "method": "POST",
+                              "responseType": "json",
+                              "url": "https://api.sendgrid.com/v3/mail/send",
+                              "headers": {
+                                "Authorization": "Bearer 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",
+                                "Content-Type": "application/json"
+                              },
+                              "body": {
+                                "personalizations": [
+                                  {
+                                    "to": [
+                                      {
+                                        "email": "r.baricic1@gmail.com"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "from": {
+                                  "email": "${user.email}"
+                                },
+                                "subject": "Konzultácia - ${user.name}",
+                                "content": [
+                                  {
+                                    "type": "text/plain",
+                                    "value": "Dobrý deň, rád by som prišiel na konzultáciu dňa ${user.date[0].value}"
+                                  }
+                                ]
+                              },
+                              "resultProperty": "dialog.EmailSResponse",
+                              "contentType": "application/json"
+                            },
+                            {
+                              "$kind": "Microsoft.IfCondition",
+                              "$designer": {
+                                "id": "WytzYl"
+                              },
+                              "condition": "dialog.EmailSResponse.statusCode==202",
+                              "actions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "K8C0RY"
+                                  },
+                                  "activity": "${SendActivity_K8C0RY()}"
+                                }
+                              ],
+                              "elseActions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "oTfd28"
+                                  },
+                                  "activity": "${SendActivity_oTfd28()}"
+                                },
+                                {
+                                  "$kind": "Microsoft.RepeatDialog",
+                                  "$designer": {
+                                    "id": "o5CPqD"
+                                  },
+                                  "activityProcessed": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "value": "7",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "uLPQB3"
+                          },
+                          "activity": "${SendActivity_uLPQB3()}"
+                        },
+                        {
+                          "$kind": "Microsoft.ConfirmInput",
+                          "$designer": {
+                            "id": "B1jCnw"
+                          },
+                          "defaultLocale": "en-us",
+                          "disabled": false,
+                          "maxTurnCount": 3,
+                          "alwaysPrompt": false,
+                          "allowInterruptions": false,
+                          "prompt": "${ConfirmInput_Prompt_B1jCnw()}",
+                          "unrecognizedPrompt": "",
+                          "invalidPrompt": "${ConfirmInput_InvalidPrompt_B1jCnw()}",
+                          "defaultValueResponse": "",
+                          "choiceOptions": {
+                            "includeNumbers": true,
+                            "inlineOrMore": ", or ",
+                            "inlineOr": " or ",
+                            "inlineSeparator": ", "
+                          },
+                          "property": "conversation.consultation",
+                          "style": "heroCard",
+                          "confirmChoices": [
+                            "Yes",
+                            "No"
+                          ]
+                        },
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "DW4WRw"
+                          },
+                          "activity": "${SendActivity_DW4WRw()}"
+                        },
+                        {
+                          "$kind": "Microsoft.IfCondition",
+                          "$designer": {
+                            "id": "GiX4pP"
+                          },
+                          "condition": "conversation.consultation",
+                          "elseActions": [
+                            {
+                              "$kind": "Microsoft.BreakLoop",
+                              "$designer": {
+                                "id": "b49Typ"
+                              }
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.SendActivity",
+                              "$designer": {
+                                "id": "S7iNcs"
+                              },
+                              "activity": "${SendActivity_S7iNcs()}"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "tUOCeM"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_tUOCeM()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.name"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "Zh5gQx"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_Zh5gQx()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "${TextInput_InvalidPrompt_Zh5gQx()}",
+                              "defaultValueResponse": "",
+                              "property": "user.email",
+                              "validations": [
+                                "contains(this.value,\"@\")"
+                              ]
+                            },
+                            {
+                              "$kind": "Microsoft.DateTimeInput",
+                              "$designer": {
+                                "id": "eVG2Jj"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${DateTimeInput_Prompt_eVG2Jj()}",
+                              "unrecognizedPrompt": "${DateTimeInput_UnrecognizedPrompt_eVG2Jj()}",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.date"
+                            },
+                            {
+                              "$kind": "Microsoft.HttpRequest",
+                              "$designer": {
+                                "id": "UndbYy"
+                              },
+                              "method": "POST",
+                              "responseType": "json",
+                              "url": "https://api.sendgrid.com/v3/mail/send",
+                              "headers": {
+                                "Authorization": "Bearer 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",
+                                "Content-Type": "application/json"
+                              },
+                              "body": {
+                                "personalizations": [
+                                  {
+                                    "to": [
+                                      {
+                                        "email": "r.baricic1@gmail.com"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "from": {
+                                  "email": "${user.email}"
+                                },
+                                "subject": "Konzultácia - ${user.name}",
+                                "content": [
+                                  {
+                                    "type": "text/plain",
+                                    "value": "Dobrý deň, rád by som prišiel na konzultáciu dňa ${user.date[0].value}"
+                                  }
+                                ]
+                              },
+                              "resultProperty": "dialog.EmailSResponse",
+                              "contentType": "application/json"
+                            },
+                            {
+                              "$kind": "Microsoft.IfCondition",
+                              "$designer": {
+                                "id": "Pn4QV1"
+                              },
+                              "condition": "dialog.EmailSResponse.statusCode==202",
+                              "actions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "hvvoNO"
+                                  },
+                                  "activity": "${SendActivity_hvvoNO()}"
+                                }
+                              ],
+                              "elseActions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "7Lwa0O"
+                                  },
+                                  "activity": "${SendActivity_7Lwa0O()}"
+                                },
+                                {
+                                  "$kind": "Microsoft.RepeatDialog",
+                                  "$designer": {
+                                    "id": "euIDGD"
+                                  },
+                                  "activityProcessed": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "value": "8",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "JSW1C6"
+                          },
+                          "activity": "${SendActivity_JSW1C6()}"
+                        },
+                        {
+                          "$kind": "Microsoft.ConfirmInput",
+                          "$designer": {
+                            "id": "SL7o6Z"
+                          },
+                          "defaultLocale": "en-us",
+                          "disabled": false,
+                          "maxTurnCount": 3,
+                          "alwaysPrompt": false,
+                          "allowInterruptions": false,
+                          "prompt": "${ConfirmInput_Prompt_SL7o6Z()}",
+                          "unrecognizedPrompt": "",
+                          "invalidPrompt": "${ConfirmInput_InvalidPrompt_SL7o6Z()}",
+                          "defaultValueResponse": "",
+                          "choiceOptions": {
+                            "includeNumbers": true,
+                            "inlineOrMore": ", or ",
+                            "inlineOr": " or ",
+                            "inlineSeparator": ", "
+                          },
+                          "property": "conversation.consultation",
+                          "style": "heroCard",
+                          "confirmChoices": [
+                            "Yes",
+                            "No"
+                          ]
+                        },
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "OA3VnF"
+                          },
+                          "activity": "${SendActivity_OA3VnF()}"
+                        },
+                        {
+                          "$kind": "Microsoft.IfCondition",
+                          "$designer": {
+                            "id": "6diX1Q"
+                          },
+                          "condition": "conversation.consultation",
+                          "elseActions": [
+                            {
+                              "$kind": "Microsoft.BreakLoop",
+                              "$designer": {
+                                "id": "FDxIjf"
+                              }
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.SendActivity",
+                              "$designer": {
+                                "id": "ZhRUvA"
+                              },
+                              "activity": "${SendActivity_ZhRUvA()}"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "G8fXer"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_G8fXer()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.name"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "JBDDkB"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_JBDDkB()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "${TextInput_InvalidPrompt_JBDDkB()}",
+                              "defaultValueResponse": "",
+                              "property": "user.email",
+                              "validations": [
+                                "contains(this.value,\"@\")"
+                              ]
+                            },
+                            {
+                              "$kind": "Microsoft.DateTimeInput",
+                              "$designer": {
+                                "id": "xNlJK6"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${DateTimeInput_Prompt_xNlJK6()}",
+                              "unrecognizedPrompt": "${DateTimeInput_UnrecognizedPrompt_xNlJK6()}",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.date"
+                            },
+                            {
+                              "$kind": "Microsoft.HttpRequest",
+                              "$designer": {
+                                "id": "PuX8Lp"
+                              },
+                              "method": "POST",
+                              "responseType": "json",
+                              "url": "https://api.sendgrid.com/v3/mail/send",
+                              "headers": {
+                                "Authorization": "Bearer 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",
+                                "Content-Type": "application/json"
+                              },
+                              "body": {
+                                "personalizations": [
+                                  {
+                                    "to": [
+                                      {
+                                        "email": "r.baricic1@gmail.com"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "from": {
+                                  "email": "${user.email}"
+                                },
+                                "subject": "Konzultácia - ${user.name}",
+                                "content": [
+                                  {
+                                    "type": "text/plain",
+                                    "value": "Dobrý deň, rád by som prišiel na konzultáciu dňa ${user.date[0].value}"
+                                  }
+                                ]
+                              },
+                              "resultProperty": "dialog.EmailSResponse",
+                              "contentType": "application/json"
+                            },
+                            {
+                              "$kind": "Microsoft.IfCondition",
+                              "$designer": {
+                                "id": "gZONFB"
+                              },
+                              "condition": "dialog.EmailSResponse.statusCode==202",
+                              "actions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "eu8GR8"
+                                  },
+                                  "activity": "${SendActivity_eu8GR8()}"
+                                }
+                              ],
+                              "elseActions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "2GGrB5"
+                                  },
+                                  "activity": "${SendActivity_2GGrB5()}"
+                                },
+                                {
+                                  "$kind": "Microsoft.RepeatDialog",
+                                  "$designer": {
+                                    "id": "I2bzw7"
+                                  },
+                                  "activityProcessed": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "value": "9",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "WPzjc4"
+                          },
+                          "activity": "${SendActivity_WPzjc4()}"
+                        },
+                        {
+                          "$kind": "Microsoft.ConfirmInput",
+                          "$designer": {
+                            "id": "5rktaT"
+                          },
+                          "defaultLocale": "en-us",
+                          "disabled": false,
+                          "maxTurnCount": 3,
+                          "alwaysPrompt": false,
+                          "allowInterruptions": false,
+                          "prompt": "${ConfirmInput_Prompt_5rktaT()}",
+                          "unrecognizedPrompt": "",
+                          "invalidPrompt": "${ConfirmInput_InvalidPrompt_5rktaT()}",
+                          "defaultValueResponse": "",
+                          "choiceOptions": {
+                            "includeNumbers": true,
+                            "inlineOrMore": ", or ",
+                            "inlineOr": " or ",
+                            "inlineSeparator": ", "
+                          },
+                          "property": "conversation.consultation",
+                          "style": "heroCard",
+                          "confirmChoices": [
+                            "Yes",
+                            "No"
+                          ]
+                        },
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "eZkmyd"
+                          },
+                          "activity": "${SendActivity_eZkmyd()}"
+                        },
+                        {
+                          "$kind": "Microsoft.IfCondition",
+                          "$designer": {
+                            "id": "rvGQdV"
+                          },
+                          "condition": "conversation.consultation",
+                          "elseActions": [
+                            {
+                              "$kind": "Microsoft.BreakLoop",
+                              "$designer": {
+                                "id": "hNsKan"
+                              }
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.SendActivity",
+                              "$designer": {
+                                "id": "3knlYB"
+                              },
+                              "activity": "${SendActivity_3knlYB()}"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "u0ZtjP"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_u0ZtjP()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.name"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "POyulU"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_POyulU()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "${TextInput_InvalidPrompt_POyulU()}",
+                              "defaultValueResponse": "",
+                              "property": "user.email",
+                              "validations": [
+                                "contains(this.value,\"@\")"
+                              ]
+                            },
+                            {
+                              "$kind": "Microsoft.DateTimeInput",
+                              "$designer": {
+                                "id": "Jf2Q6X"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${DateTimeInput_Prompt_Jf2Q6X()}",
+                              "unrecognizedPrompt": "${DateTimeInput_UnrecognizedPrompt_Jf2Q6X()}",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.date"
+                            },
+                            {
+                              "$kind": "Microsoft.HttpRequest",
+                              "$designer": {
+                                "id": "mPGi31"
+                              },
+                              "method": "POST",
+                              "responseType": "json",
+                              "url": "https://api.sendgrid.com/v3/mail/send",
+                              "headers": {
+                                "Authorization": "Bearer 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",
+                                "Content-Type": "application/json"
+                              },
+                              "body": {
+                                "personalizations": [
+                                  {
+                                    "to": [
+                                      {
+                                        "email": "r.baricic1@gmail.com"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "from": {
+                                  "email": "${user.email}"
+                                },
+                                "subject": "Konzultácia - ${user.name}",
+                                "content": [
+                                  {
+                                    "type": "text/plain",
+                                    "value": "Dobrý deň, rád by som prišiel na konzultáciu dňa ${user.date[0].value}"
+                                  }
+                                ]
+                              },
+                              "resultProperty": "dialog.EmailSResponse",
+                              "contentType": "application/json"
+                            },
+                            {
+                              "$kind": "Microsoft.IfCondition",
+                              "$designer": {
+                                "id": "7TgaL6"
+                              },
+                              "condition": "dialog.EmailSResponse.statusCode==202",
+                              "actions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "wVxWnZ"
+                                  },
+                                  "activity": "${SendActivity_wVxWnZ()}"
+                                }
+                              ],
+                              "elseActions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "BRzJ3X"
+                                  },
+                                  "activity": "${SendActivity_BRzJ3X()}"
+                                },
+                                {
+                                  "$kind": "Microsoft.RepeatDialog",
+                                  "$designer": {
+                                    "id": "itnKMP"
+                                  },
+                                  "activityProcessed": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "value": "10",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "1m2Tts"
+                          },
+                          "activity": "${SendActivity_1m2Tts()}"
+                        },
+                        {
+                          "$kind": "Microsoft.ConfirmInput",
+                          "$designer": {
+                            "id": "tEVDMo"
+                          },
+                          "defaultLocale": "en-us",
+                          "disabled": false,
+                          "maxTurnCount": 3,
+                          "alwaysPrompt": false,
+                          "allowInterruptions": false,
+                          "prompt": "${ConfirmInput_Prompt_tEVDMo()}",
+                          "unrecognizedPrompt": "",
+                          "invalidPrompt": "${ConfirmInput_InvalidPrompt_tEVDMo()}",
+                          "defaultValueResponse": "",
+                          "choiceOptions": {
+                            "includeNumbers": true,
+                            "inlineOrMore": ", or ",
+                            "inlineOr": " or ",
+                            "inlineSeparator": ", "
+                          },
+                          "property": "conversation.consultation",
+                          "style": "heroCard",
+                          "confirmChoices": [
+                            "Yes",
+                            "No"
+                          ]
+                        },
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "3WfbPL"
+                          },
+                          "activity": "${SendActivity_3WfbPL()}"
+                        },
+                        {
+                          "$kind": "Microsoft.IfCondition",
+                          "$designer": {
+                            "id": "bsBgfd"
+                          },
+                          "condition": "conversation.consultation",
+                          "elseActions": [
+                            {
+                              "$kind": "Microsoft.BreakLoop",
+                              "$designer": {
+                                "id": "1o76BN"
+                              }
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.SendActivity",
+                              "$designer": {
+                                "id": "KfFLNk"
+                              },
+                              "activity": "${SendActivity_KfFLNk()}"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "cO5Ndq"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_cO5Ndq()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.name"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "dhWDnv"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_dhWDnv()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "${TextInput_InvalidPrompt_dhWDnv()}",
+                              "defaultValueResponse": "",
+                              "property": "user.email",
+                              "validations": [
+                                "contains(this.value,\"@\")"
+                              ]
+                            },
+                            {
+                              "$kind": "Microsoft.DateTimeInput",
+                              "$designer": {
+                                "id": "dRKvAU"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${DateTimeInput_Prompt_dRKvAU()}",
+                              "unrecognizedPrompt": "${DateTimeInput_UnrecognizedPrompt_dRKvAU()}",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.date"
+                            },
+                            {
+                              "$kind": "Microsoft.HttpRequest",
+                              "$designer": {
+                                "id": "fCvm10"
+                              },
+                              "method": "POST",
+                              "responseType": "json",
+                              "url": "https://api.sendgrid.com/v3/mail/send",
+                              "headers": {
+                                "Authorization": "Bearer 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",
+                                "Content-Type": "application/json"
+                              },
+                              "body": {
+                                "personalizations": [
+                                  {
+                                    "to": [
+                                      {
+                                        "email": "r.baricic1@gmail.com"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "from": {
+                                  "email": "${user.email}"
+                                },
+                                "subject": "Konzultácia - ${user.name}",
+                                "content": [
+                                  {
+                                    "type": "text/plain",
+                                    "value": "Dobrý deň, rád by som prišiel na konzultáciu dňa ${user.date[0].value}"
+                                  }
+                                ]
+                              },
+                              "resultProperty": "dialog.EmailSResponse",
+                              "contentType": "application/json"
+                            },
+                            {
+                              "$kind": "Microsoft.IfCondition",
+                              "$designer": {
+                                "id": "tyVV1z"
+                              },
+                              "condition": "dialog.EmailSResponse.statusCode==202",
+                              "actions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "Vl9o6i"
+                                  },
+                                  "activity": "${SendActivity_Vl9o6i()}"
+                                }
+                              ],
+                              "elseActions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "kRuDSl"
+                                  },
+                                  "activity": "${SendActivity_kRuDSl()}"
+                                },
+                                {
+                                  "$kind": "Microsoft.RepeatDialog",
+                                  "$designer": {
+                                    "id": "08Fxsi"
+                                  },
+                                  "activityProcessed": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "value": "11",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "39nz8R"
+                          },
+                          "activity": "${SendActivity_39nz8R()}"
+                        },
+                        {
+                          "$kind": "Microsoft.ConfirmInput",
+                          "$designer": {
+                            "id": "3yUBrp"
+                          },
+                          "defaultLocale": "en-us",
+                          "disabled": false,
+                          "maxTurnCount": 3,
+                          "alwaysPrompt": false,
+                          "allowInterruptions": false,
+                          "prompt": "${ConfirmInput_Prompt_3yUBrp()}",
+                          "unrecognizedPrompt": "",
+                          "invalidPrompt": "${ConfirmInput_InvalidPrompt_3yUBrp()}",
+                          "defaultValueResponse": "",
+                          "choiceOptions": {
+                            "includeNumbers": true,
+                            "inlineOrMore": ", or ",
+                            "inlineOr": " or ",
+                            "inlineSeparator": ", "
+                          },
+                          "property": "conversation.consultation",
+                          "style": "heroCard",
+                          "confirmChoices": [
+                            "Yes",
+                            "No"
+                          ]
+                        },
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "3DMYAk"
+                          },
+                          "activity": "${SendActivity_3DMYAk()}"
+                        },
+                        {
+                          "$kind": "Microsoft.IfCondition",
+                          "$designer": {
+                            "id": "mPeZRN"
+                          },
+                          "condition": "conversation.consultation",
+                          "elseActions": [
+                            {
+                              "$kind": "Microsoft.BreakLoop",
+                              "$designer": {
+                                "id": "s6diBr"
+                              }
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.SendActivity",
+                              "$designer": {
+                                "id": "iVgd90"
+                              },
+                              "activity": "${SendActivity_iVgd90()}"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "ZA0kv4"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_ZA0kv4()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.name"
+                            },
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "7MuwkI"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_7MuwkI()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "${TextInput_InvalidPrompt_7MuwkI()}",
+                              "defaultValueResponse": "",
+                              "property": "user.email",
+                              "validations": [
+                                "contains(this.value,\"@\")"
+                              ]
+                            },
+                            {
+                              "$kind": "Microsoft.DateTimeInput",
+                              "$designer": {
+                                "id": "626xy9"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${DateTimeInput_Prompt_626xy9()}",
+                              "unrecognizedPrompt": "${DateTimeInput_UnrecognizedPrompt_626xy9()}",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.date"
+                            },
+                            {
+                              "$kind": "Microsoft.HttpRequest",
+                              "$designer": {
+                                "id": "yo3EGM"
+                              },
+                              "method": "POST",
+                              "responseType": "json",
+                              "url": "https://api.sendgrid.com/v3/mail/send",
+                              "headers": {
+                                "Authorization": "Bearer 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",
+                                "Content-Type": "application/json"
+                              },
+                              "body": {
+                                "personalizations": [
+                                  {
+                                    "to": [
+                                      {
+                                        "email": "r.baricic1@gmail.com"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "from": {
+                                  "email": "${user.email}"
+                                },
+                                "subject": "Konzultácia - ${user.name}",
+                                "content": [
+                                  {
+                                    "type": "text/plain",
+                                    "value": "Dobrý deň, rád by som prišiel na konzultáciu dňa ${user.date[0].value}"
+                                  }
+                                ]
+                              },
+                              "resultProperty": "dialog.EmailSResponse",
+                              "contentType": "application/json"
+                            },
+                            {
+                              "$kind": "Microsoft.IfCondition",
+                              "$designer": {
+                                "id": "bRyb8T"
+                              },
+                              "condition": "dialog.EmailSResponse.statusCode==202",
+                              "actions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "TQgTA0"
+                                  },
+                                  "activity": "${SendActivity_TQgTA0()}"
+                                }
+                              ],
+                              "elseActions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "2ZsjRX"
+                                  },
+                                  "activity": "${SendActivity_2ZsjRX()}"
+                                },
+                                {
+                                  "$kind": "Microsoft.RepeatDialog",
+                                  "$designer": {
+                                    "id": "URckVu"
+                                  },
+                                  "activityProcessed": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }

@@ -48,7 +48,36 @@
 # ChoiceInput_Prompt_v6uNGC()
 - Please select from teachers below
 # SendActivity_SGxMlm()
-- Mr. Hostovecky is located in the main FPV building.  \n\n Room: 3.15 \n\n  Telephone number: +4219XXXXXXXX \n\n Email: marian.hostovecky@ucm.sk \n\n His consultation hours are every Monday 10:00-14:00
+- Mgr. Marián Hosťovecký, PhD.\n\nEmail: 	marian.hostovecky@ucm.sk\n\nRoom: 309 B\n\nPhone number: 033/ 55 65 378 \n\nConsultation: Pondelok 14:30 - 16:30 Denné a externé štúdium
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -56,13 +85,14 @@
 
 
 # ConfirmInput_Prompt_rseYDg()
-- Do you wish to create an appointment outside of the consultation hours ?
-# ConfirmInput_InvalidPrompt_rseYDg()
-- I didn't recognize this answer. Could you please try again ?
-# SendActivity_xcJMKE()
-- Since you selected "Yes", I will need to ask you several questions. \n\n None of the data that you enter will be stored. It will be only used for creating an appointment.
-# TextInput_Prompt_x3c9Zp()
--  Firstly, please state your full name
+# SendActivity_EEn2nV()
+- Ing. Jana Jurinová, PhD.\n\nEmail: jana.jurinova@ucm.sk\n\nRoom:303 B\n\nPhone number:033/ 55 65 384\n\nConstultations: Pondelok 10:15 - 11:10 Denné štúdium\n\nPondelok 11:10 - 12:05 Externé štúdium
+
+
+
+
+
+
 # TextInput_Prompt_OGBhRn()
 - What is your email address ?
 # TextInput_InvalidPrompt_OGBhRn()
@@ -86,6 +116,7 @@
 
 # ChoiceInput_Prompt_f9QxVJ()
 - There are few thing that I can help you with
+<<<<<<< Updated upstream
 # ChoiceInput_Prompt_B4oOtQ()
 - Please  select your FAQ
 # SendActivity_nLwAbM()
@@ -119,4 +150,377 @@
 =======
 
 
+>>>>>>> Stashed changes
+=======
+# SendActivity_EEn2nV()
+# SendActivity_yDyQib()
+- PaedDr. Miroslav Ölvecký, PhD.\n\nEmail: miroslav.olvecky@ucm.sk\n\nRoom:307 B\n\nPhone number:033 5565 349\n\nConstultations: Pondelok 10:00 - 12:00 Denné a externé štúdium\n\n
+
+
+
+
+
+
+# ConfirmInput_Prompt_ZgSnsT()
+- Do you wish to create an appointment outside of the consultation hours ?
+# ConfirmInput_InvalidPrompt_ZgSnsT()
+- I didn't recognize this answer. Could you please try again ?
+# SendActivity_G07F4p()
+- ${conversation.consultation}
+# SendActivity_ktflBd()
+- Since you selected "Yes", I will need to ask you several questions. \n\n None of the data that you enter will be stored. It will be only used for creating an appointment.
+# TextInput_Prompt_oj48K8()
+-  Firstly, please state your full name
+# TextInput_Prompt_pZic1F()
+- What is your email address ?
+# TextInput_InvalidPrompt_pZic1F()
+- This email address is not valid.
+
+# DateTimeInput_Prompt_76o0ne()
+- When would you like to create an appointment ? \n\n Insert date in format DD.MM.YYYY
+# DateTimeInput_UnrecognizedPrompt_76o0ne()
+-${DateTimeInput_UnrecognizedPrompt_ccTzOC()}
+# SendActivity_4w4Q34()
+- Email was successfully send to the recipient.
+# SendActivity_P9RRvG()
+- I have encountered some issue, we will need to do it one more time. I am so sorry.
+- Something happend, I really do not know what so we need to start over. I am so sorry.
+# SendActivity_XZGE0g()
+- doc. Ing. Michal Čerňanský, PhD.\n\nEmail: michal.cernansky@ucm.sk\n\nRoom:306 B\n\nPhone number:033/ 55 65 381\n\nConstultations: Utorok 10:15 - 12:05 Denné a externé štúdium\n\n
+
+
+
+
+
+
+
+
+# ConfirmInput_Prompt_PodBex()
+- Do you wish to create an appointment outside of the consultation hours ?
+# ConfirmInput_InvalidPrompt_PodBex()
+- I didn't recognize this answer. Could you please try again ?
+# SendActivity_9t5NWJ()
+- ${conversation.consultation}
+# SendActivity_PgeeHX()
+- Since you selected "Yes", I will need to ask you several questions. \n\n None of the data that you enter will be stored. It will be only used for creating an appointment.
+# TextInput_Prompt_v4yU5w()
+-  Firstly, please state your full name
+# TextInput_Prompt_hACXBI()
+- What is your email address ?
+# TextInput_InvalidPrompt_hACXBI()
+- This email address is not valid.
+
+# DateTimeInput_Prompt_STVNDM()
+- When would you like to create an appointment ? \n\n Insert date in format DD.MM.YYYY
+# DateTimeInput_UnrecognizedPrompt_STVNDM()
+-${DateTimeInput_UnrecognizedPrompt_ccTzOC()}
+# SendActivity_9Z1EuB()
+- Email was successfully send to the recipient.
+# SendActivity_A49LoT()
+# SendActivity_J5Z170()
+-doc. RNDr. Iveta Dirgová Luptáková, PhD.\n\nEmail: iveta.dirgova@ucm.sk\n\nRoom:308 B\n\nPhone number:033/ 55 65 372\n\nConstultations: Piatok 10:00 – 12:00 Denné a externé štúdium\n\n
+
+
+
+
+
+
+
+
+
+
+# ConfirmInput_Prompt_qipBmP()
+- Do you wish to create an appointment outside of the consultation hours ?
+# ConfirmInput_InvalidPrompt_qipBmP()
+- I didn't recognize this answer. Could you please try again ?
+# SendActivity_W6PT2e()
+- ${conversation.consultation}
+# SendActivity_GFTt2m()
+- Since you selected "Yes", I will need to ask you several questions. \n\n None of the data that you enter will be stored. It will be only used for creating an appointment.
+# TextInput_Prompt_aRVMhQ()
+-  Firstly, please state your full name
+# TextInput_Prompt_Bw6TkH()
+- What is your email address ?
+# TextInput_InvalidPrompt_Bw6TkH()
+- This email address is not valid.
+
+# DateTimeInput_Prompt_vSxrHg()
+- When would you like to create an appointment ? \n\n Insert date in format DD.MM.YYYY
+# DateTimeInput_UnrecognizedPrompt_vSxrHg()
+-${DateTimeInput_UnrecognizedPrompt_ccTzOC()}
+# SendActivity_YyxTef()
+# SendActivity_BTsutF()
+-Ing. Miroslav Beňo, PhD.\n\nEmail: miroslav.beno@ucm.sk\n\nRoom:303 A\n\nPhone number:033/ 55 65 383\n\nConstultations: Štvrtok 12:05 - 13:55 Denné a externé štúdium\n\n
+
+
+
+
+
+
+# ConfirmInput_Prompt_34KGj4()
+- Do you wish to create an appointment outside of the consultation hours ?
+# ConfirmInput_InvalidPrompt_34KGj4()
+- I didn't recognize this answer. Could you please try again ?
+# SendActivity_WvEhLR()
+- ${conversation.consultation}
+# SendActivity_qLV0r6()
+- Since you selected "Yes", I will need to ask you several questions. \n\n None of the data that you enter will be stored. It will be only used for creating an appointment.
+# TextInput_Prompt_t6AydC()
+-  Firstly, please state your full name
+# TextInput_Prompt_G2zcHP()
+- What is your email address ?
+# TextInput_InvalidPrompt_G2zcHP()
+- This email address is not valid.
+
+# DateTimeInput_Prompt_D8GJAX()
+- When would you like to create an appointment ? \n\n Insert date in format DD.MM.YYYY
+# DateTimeInput_UnrecognizedPrompt_D8GJAX()
+# SendActivity_uDLkjN()
+- Ing. Darja Gabriška, PhD.\n\nEmail: darja.gabriska@ucm.sk\n\nRoom:307 A\n\nPhone number:033/ 55 65 385\n\nConstultations: Utorok 12:00 – 14:00 Denné a externé štúdium\n\n
+
+
+
+
+
+
+# SendActivity_BTsutF()
+- Mr. Hostovecky is located in the main FPV building.  \n\n Room: 3.15 \n\n  Telephone number: +4219XXXXXXXX \n\n Email: marian.hostovecky@ucm.sk \n\n His consultation hours are every Monday 10:00-14:00
+
+
+
+
+
+
+# ConfirmInput_Prompt_9AElE2()
+- Do you wish to create an appointment outside of the consultation hours ?
+# ConfirmInput_InvalidPrompt_9AElE2()
+- I didn't recognize this answer. Could you please try again ?
+# SendActivity_zrIlqU()
+- ${conversation.consultation}
+# SendActivity_ONGU2G()
+- Since you selected "Yes", I will need to ask you several questions. \n\n None of the data that you enter will be stored. It will be only used for creating an appointment.
+# TextInput_Prompt_EC9vY5()
+-  Firstly, please state your full name
+# TextInput_Prompt_eYaR4b()
+- What is your email address ?
+# TextInput_InvalidPrompt_eYaR4b()
+- This email address is not valid.
+
+# DateTimeInput_Prompt_q9LWGT()
+- When would you like to create an appointment ? \n\n Insert date in format DD.MM.YYYY
+# SendActivity_uLPQB3()
+-prof. RNDr. Jiří Pospíchal, DrSc.\n\nEmail: jiri.pospichal@ucm.sk\n\nPhone number:033/ 55 65 352\n\nConstultations: Utorok 16:00 - 18:00 Denné štúdium
+
+
+
+
+
+
+
+
+- Mr. Hostovecky is located in the main FPV building.  \n\n Room: 3.15 \n\n  Telephone number: +4219XXXXXXXX \n\n Email: marian.hostovecky@ucm.sk \n\n His consultation hours are every Monday 10:00-14:00
+
+
+
+
+
+
+# ConfirmInput_Prompt_YC4lQ6()
+- Do you wish to create an appointment outside of the consultation hours ?
+# ConfirmInput_InvalidPrompt_YC4lQ6()
+- I didn't recognize this answer. Could you please try again ?
+# SendActivity_W3OQuY()
+- ${conversation.consultation}
+# SendActivity_Z2jYLi()
+- Since you selected "Yes", I will need to ask you several questions. \n\n None of the data that you enter will be stored. It will be only used for creating an appointment.
+# TextInput_Prompt_ME92D4()
+-  Firstly, please state your full name
+# TextInput_Prompt_9DMyzQ()
+- What is your email address ?
+# TextInput_InvalidPrompt_9DMyzQ()
+- This email address is not valid.
+
+# DateTimeInput_Prompt_NWyJce()
+# SendActivity_JSW1C6()
+- prof. Ing. Vladimír Kvasnička, DrSc., emeritný profesor\n\nEmail: vladimir.kvasnicka@ucm.sk\n\nRoom:302 A\n\nPhone number:033/ 55 65 352\n\nConstultations: Piatok 12:00 - 14:00 Denné štúdium
+
+
+
+
+
+
+- Something happend, I really do not know what so we need to start over. I am so sorry.
+
+# SendActivity_uLPQB3()
+- Mr. Hostovecky is located in the main FPV building.  \n\n Room: 3.15 \n\n  Telephone number: +4219XXXXXXXX \n\n Email: marian.hostovecky@ucm.sk \n\n His consultation hours are every Monday 10:00-14:00
+
+
+
+
+
+
+# ConfirmInput_Prompt_B1jCnw()
+- Do you wish to create an appointment outside of the consultation hours ?
+# ConfirmInput_InvalidPrompt_B1jCnw()
+- I didn't recognize this answer. Could you please try again ?
+# SendActivity_DW4WRw()
+- ${conversation.consultation}
+# SendActivity_S7iNcs()
+- Since you selected "Yes", I will need to ask you several questions. \n\n None of the data that you enter will be stored. It will be only used for creating an appointment.
+# TextInput_Prompt_tUOCeM()
+-  Firstly, please state your full name
+# TextInput_Prompt_Zh5gQx()
+- What is your email address ?
+# TextInput_InvalidPrompt_Zh5gQx()
+- This email address is not valid.
+
+# SendActivity_WPzjc4()
+-doc. RNDr. PaedDr. Ladislav Huraj, PhD., mimoriadny profesor\n\nEmail: ladislav.huraj@ucm.sk\n\nRoom:306 A\n\nPhone number:033/ 55 65 379\n\nConstultations: Utorok 10:00 - 11:00 Denné štúdium\n\nUtorok 11:00 - 12:00 Externé štúdium
+
+
+
+
+
+
+- I have encountered some issue, we will need to do it one more time. I am so sorry.
+- Something happend, I really do not know what so we need to start over. I am so sorry.
+
+# SendActivity_JSW1C6()
+- Mr. Hostovecky is located in the main FPV building.  \n\n Room: 3.15 \n\n  Telephone number: +4219XXXXXXXX \n\n Email: marian.hostovecky@ucm.sk \n\n His consultation hours are every Monday 10:00-14:00
+
+
+
+
+
+
+# ConfirmInput_Prompt_SL7o6Z()
+- Do you wish to create an appointment outside of the consultation hours ?
+# ConfirmInput_InvalidPrompt_SL7o6Z()
+- I didn't recognize this answer. Could you please try again ?
+# SendActivity_OA3VnF()
+- ${conversation.consultation}
+# SendActivity_ZhRUvA()
+- Since you selected "Yes", I will need to ask you several questions. \n\n None of the data that you enter will be stored. It will be only used for creating an appointment.
+# TextInput_Prompt_G8fXer()
+-  Firstly, please state your full name
+# TextInput_Prompt_JBDDkB()
+- What is your email address ?
+# SendActivity_1m2Tts()
+- Ing. Katarína Pribilová, PhD.\n\nEmail: katarina.pribilova@ucm.sk\n\nRoom:307 A\n\nPhone number:033/ 55 65 385\n\nConstultations: Pondelok 09:00 – 10:00 Denné štúdium\n\nUtorok 13:00 – 14:00 Externé štúdium
+
+
+
+
+
+
+
+# SendActivity_eu8GR8()
+- Email was successfully send to the recipient.
+# SendActivity_2GGrB5()
+- I have encountered some issue, we will need to do it one more time. I am so sorry.
+- Something happend, I really do not know what so we need to start over. I am so sorry.
+
+# SendActivity_WPzjc4()
+- Mr. Hostovecky is located in the main FPV building.  \n\n Room: 3.15 \n\n  Telephone number: +4219XXXXXXXX \n\n Email: marian.hostovecky@ucm.sk \n\n His consultation hours are every Monday 10:00-14:00
+
+
+
+
+
+
+# ConfirmInput_Prompt_5rktaT()
+- Do you wish to create an appointment outside of the consultation hours ?
+# ConfirmInput_InvalidPrompt_5rktaT()
+- I didn't recognize this answer. Could you please try again ?
+# SendActivity_eZkmyd()
+- ${conversation.consultation}
+# SendActivity_3knlYB()
+- Since you selected "Yes", I will need to ask you several questions. \n\n None of the data that you enter will be stored. It will be only used for creating an appointment.
+# TextInput_Prompt_u0ZtjP()
+-  Firstly, please state your full name
+# TextInput_Prompt_POyulU()
+- What is your email address ?
+# TextInput_InvalidPrompt_POyulU()
+- This email address is not valid.
+
+# DateTimeInput_Prompt_Jf2Q6X()
+- When would you like to create an appointment ? \n\n Insert date in format DD.MM.YYYY
+# DateTimeInput_UnrecognizedPrompt_Jf2Q6X()
+-${DateTimeInput_UnrecognizedPrompt_ccTzOC()}
+# SendActivity_wVxWnZ()
+- Email was successfully send to the recipient.
+# SendActivity_BRzJ3X()
+- I have encountered some issue, we will need to do it one more time. I am so sorry.
+- Something happend, I really do not know what so we need to start over. I am so sorry.
+
+# SendActivity_1m2Tts()
+- Mr. Hostovecky is located in the main FPV building.  \n\n Room: 3.15 \n\n  Telephone number: +4219XXXXXXXX \n\n Email: marian.hostovecky@ucm.sk \n\n His consultation hours are every Monday 10:00-14:00
+
+
+
+
+
+
+# ConfirmInput_Prompt_tEVDMo()
+- Do you wish to create an appointment outside of the consultation hours ?
+# ConfirmInput_InvalidPrompt_tEVDMo()
+- I didn't recognize this answer. Could you please try again ?
+# SendActivity_3WfbPL()
+- ${conversation.consultation}
+# SendActivity_KfFLNk()
+- Since you selected "Yes", I will need to ask you several questions. \n\n None of the data that you enter will be stored. It will be only used for creating an appointment.
+# TextInput_Prompt_cO5Ndq()
+-  Firstly, please state your full name
+# TextInput_Prompt_dhWDnv()
+- What is your email address ?
+# TextInput_InvalidPrompt_dhWDnv()
+- This email address is not valid.
+
+# DateTimeInput_Prompt_dRKvAU()
+- When would you like to create an appointment ? \n\n Insert date in format DD.MM.YYYY
+# DateTimeInput_UnrecognizedPrompt_dRKvAU()
+-${DateTimeInput_UnrecognizedPrompt_ccTzOC()}
+# SendActivity_Vl9o6i()
+- Email was successfully send to the recipient.
+# SendActivity_kRuDSl()
+- I have encountered some issue, we will need to do it one more time. I am so sorry.
+- Something happend, I really do not know what so we need to start over. I am so sorry.
+
+# SendActivity_39nz8R()
+- Mr. Hostovecky is located in the main FPV building.  \n\n Room: 3.15 \n\n  Telephone number: +4219XXXXXXXX \n\n Email: marian.hostovecky@ucm.sk \n\n His consultation hours are every Monday 10:00-14:00
+
+
+
+
+
+
+# ConfirmInput_Prompt_3yUBrp()
+- Do you wish to create an appointment outside of the consultation hours ?
+# ConfirmInput_InvalidPrompt_3yUBrp()
+- I didn't recognize this answer. Could you please try again ?
+# SendActivity_3DMYAk()
+- ${conversation.consultation}
+# SendActivity_iVgd90()
+- Since you selected "Yes", I will need to ask you several questions. \n\n None of the data that you enter will be stored. It will be only used for creating an appointment.
+# TextInput_Prompt_ZA0kv4()
+-  Firstly, please state your full name
+# TextInput_Prompt_7MuwkI()
+- What is your email address ?
+# TextInput_InvalidPrompt_7MuwkI()
+- This email address is not valid.
+
+# DateTimeInput_Prompt_626xy9()
+- When would you like to create an appointment ? \n\n Insert date in format DD.MM.YYYY
+# DateTimeInput_UnrecognizedPrompt_626xy9()
+-${DateTimeInput_UnrecognizedPrompt_ccTzOC()}
+# SendActivity_TQgTA0()
+- Email was successfully send to the recipient.
+# SendActivity_2ZsjRX()
+- I have encountered some issue, we will need to do it one more time. I am so sorry.
+- Something happend, I really do not know what so we need to start over. I am so sorry.
+
+# DateTimeInput_UnrecognizedPrompt_q9LWGT()
+-
+# DateTimeInput_UnrecognizedPrompt_ccTzOC()
+- 
 >>>>>>> Stashed changes
