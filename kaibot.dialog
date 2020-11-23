@@ -655,6 +655,103 @@
           ]
         }
       ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "0an9Vk",
+        "name": "FAQ"
+      },
+      "intent": "FAQ",
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "B4oOtQ"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_B4oOtQ()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true
+          },
+          "choices": [
+            {
+              "value": "Study Department"
+            },
+            {
+              "value": "Admission Procedure"
+            },
+            {
+              "value": "Employees"
+            }
+          ],
+          "style": "auto",
+          "value": "Choice",
+          "property": "Property_Choice",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "7r2AEz"
+          },
+          "default": [],
+          "condition": "Property_Choice",
+          "cases": [
+            {
+              "value": "Study Department",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "nLwAbM"
+                  },
+                  "activity": "${SendActivity_nLwAbM()}"
+                }
+              ]
+            },
+            {
+              "value": "Admission Procedure",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "5J9GLb"
+                  },
+                  "activity": "${SendActivity_5J9GLb()}"
+                }
+              ]
+            },
+            {
+              "value": "Employees",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "vVPJdD"
+                  },
+                  "activity": "${SendActivity_vVPJdD()}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "RkHJIj"
+          }
+        }
+      ]
     }
   ],
   "$schema": "https://raw.githubusercontent.com/microsoft/BotFramework-Composer/stable/Composer/packages/server/schemas/sdk.schema",
@@ -670,6 +767,10 @@
       {
         "intent": "Teacher",
         "pattern": "Teacher"
+      },
+      {
+        "intent": "FAQ",
+        "pattern": "FAQ"
       }
     ]
   },
