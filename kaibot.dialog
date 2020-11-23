@@ -409,55 +409,6 @@
                               "property": "user.date"
                             },
                             {
-                              "$kind": "Microsoft.ConfirmInput",
-                              "$designer": {
-                                "id": "nyiTfk"
-                              },
-                              "defaultLocale": "en-us",
-                              "disabled": false,
-                              "maxTurnCount": 3,
-                              "alwaysPrompt": false,
-                              "allowInterruptions": false,
-                              "prompt": "${ConfirmInput_Prompt_nyiTfk()}",
-                              "unrecognizedPrompt": "",
-                              "invalidPrompt": "",
-                              "defaultValueResponse": "",
-                              "choiceOptions": {
-                                "includeNumbers": true,
-                                "inlineOrMore": ", or "
-                              },
-                              "property": "conversation.attachmentsConf",
-                              "style": "heroCard",
-                              "confirmChoices": [
-                                "Yes",
-                                "No"
-                              ]
-                            },
-                            {
-                              "$kind": "Microsoft.IfCondition",
-                              "$designer": {
-                                "id": "qRxfei"
-                              },
-                              "condition": "conversation.attachmentsConf",
-                              "actions": [
-                                {
-                                  "$kind": "Microsoft.AttachmentInput",
-                                  "$designer": {
-                                    "id": "OJx99I"
-                                  },
-                                  "disabled": false,
-                                  "maxTurnCount": 3,
-                                  "alwaysPrompt": false,
-                                  "allowInterruptions": false,
-                                  "prompt": "${AttachmentInput_Prompt_OJx99I()}",
-                                  "unrecognizedPrompt": "",
-                                  "invalidPrompt": "",
-                                  "defaultValueResponse": "",
-                                  "property": "dialog.attachments"
-                                }
-                              ]
-                            },
-                            {
                               "$kind": "Microsoft.HttpRequest",
                               "$designer": {
                                 "id": "Kxyaom"
